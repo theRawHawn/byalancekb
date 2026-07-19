@@ -151,7 +151,40 @@ Liability: IGST ₹40,000, CGST ₹25,000, SGST ₹25,000. Available credit: IGS
 Post the set-off as a journal entry debiting Output CGST/SGST/IGST and crediting Input IGST/CGST/SGST in the sequence above, followed by a separate cash ledger entry for any balance payable.`,
   },
 
-  // ---------------- Income Tax ----------------
+  {
+    category: "gst",
+    slug: "e-invoicing-threshold-applicability",
+    title: "E-Invoicing: Current Threshold and Who Must Comply",
+    description:
+      "The ₹5 crore turnover test, how it's calculated at the PAN level, exemptions, and the 30-day IRP reporting rule.",
+    section: "Notification No. 10/2023-CT",
+    tags: ["e-invoicing", "IRN", "IRP", "threshold", "e-invoice"],
+    lastUpdated: "2026-06-20",
+    content: `## The current threshold
+
+E-invoicing is mandatory for businesses whose **aggregate annual turnover (AATO) exceeds ₹5 crore** in any financial year since GST began (FY 2017-18 onward). This has been the threshold since 1 August 2023 (Notification No. 10/2023-Central Tax) and, as of mid-2026, has not been lowered further.
+
+## The test that catches people off guard
+
+Once a business crosses ₹5 crore in **any** financial year since 2017-18, e-invoicing applies to it **permanently** — even if turnover later drops back below ₹5 crore. It is not a rolling current-year test.
+
+The threshold is also tested at the **PAN level**, not per GSTIN. If a business holds multiple GST registrations under one PAN, turnover across all of them is aggregated to test the ₹5 crore limit.
+
+## 30-day reporting window
+
+For businesses with AATO of ₹10 crore or more, e-invoices must be reported to the Invoice Registration Portal (IRP) within **30 days** of the invoice date; reporting after that window is rejected by the portal. This 30-day rule was extended down from businesses over ₹100 crore to those over ₹10 crore effective 1 April 2025.
+
+## What's covered and what's exempt
+
+E-invoicing applies to B2B invoices, exports, supplies to SEZ units, and debit/credit notes tied to these. **B2C transactions are not covered.**
+
+Certain categories remain exempt regardless of turnover: SEZ units (as suppliers), banks and insurers, NBFCs, goods transport agencies, passenger transport services, and cinema ticket sellers.
+
+## Practical filing note
+
+E-invoicing does not replace GSTR-1 — but e-invoice data auto-populates into GSTR-1, which materially cuts manual entry. Reconcile the auto-populated GSTR-1 against your billing register before filing rather than assuming the auto-population is complete.`,
+  },
+
   {
     category: "income-tax",
     slug: "income-tax-act-2025-transition-guide",
@@ -277,7 +310,42 @@ Budget 2026 extended the revised-return window: a return can now be revised up t
 Even though the Income Tax Act, 2025 is now in force, the ITR filed in 2026 for FY 2025-26 (AY 2026-27) relates to income earned before 1 April 2026 and is therefore governed entirely by the **Income Tax Act, 1961**. The first return filed under the new Act's provisions will be for Tax Year 2026-27, filed in the 2027 cycle.`,
   },
 
-  // ---------------- Payroll & Labour Codes ----------------
+  {
+    category: "income-tax",
+    slug: "tds-on-purchase-of-goods-194q",
+    title: "TDS on Purchase of Goods: Section 194Q (Now Under Section 393)",
+    description:
+      "The ₹50 lakh / ₹10 crore turnover test, why Section 206C(1H) no longer matters, and how GST is treated in the calculation.",
+    section: "Section 393 (was 194Q)",
+    tags: ["194Q", "393", "TCS", "206C(1H)", "purchase of goods"],
+    lastUpdated: "2026-06-25",
+    content: `## The rule
+
+A buyer must deduct TDS at **0.1%** on purchases of goods from a resident seller once the aggregate value from that seller exceeds **₹50 lakh** in a financial year — but only if the buyer's turnover in the *preceding* financial year exceeded **₹10 crore**. TDS is deducted on the amount exceeding ₹50 lakh, not the full purchase value.
+
+If the seller hasn't furnished a valid PAN, the rate rises to **5%** under the PAN-quoting provisions.
+
+Under the Income Tax Act, 2025, this obligation sits inside the consolidated **Section 393** TDS table rather than as a standalone section — the rate and threshold logic carries over unchanged.
+
+## Section 206C(1H) no longer exists — stop tracking it
+
+Section 206C(1H) (TCS on sale of goods, the seller-side mirror of 194Q) was **abolished with effect from 1 April 2025**. Before that date, where both provisions could apply to the same transaction, 194Q took precedence and the seller didn't need to collect TCS. From FY 2025-26 onward, that overlap question is moot — **194Q is now the sole provision governing tax at source on goods purchases.** If your checklist still references 206C(1H) as something to reconcile against, remove it.
+
+## GST treatment
+
+CBDT Circular No. 13/2021 (30 June 2021) clarified that TDS under Section 194Q is computed on the purchase value **excluding GST**, provided GST is separately indicated on the invoice or in the contract.
+
+## Filing and deposit
+
+- Deposit TDS via Challan ITNS 281 within **7 days** of the month-end (for March deductions, by 30 April)
+- Report quarterly in the return that replaced Form 26Q (see the Section 393 TDS article for the current form number)
+- Issue the TDS certificate to the seller within 15 days of the return due date
+
+## What's excluded
+
+Transactions on which TDS is deductible under another provision (e.g., Section 194O for e-commerce operators), purchases from non-resident sellers without an Indian business connection, transactions in securities/commodities on recognised exchanges, and purchases by government entities not carrying on business.`,
+  },
+
   {
     category: "payroll-labour-codes",
     slug: "four-labour-codes-overview",
@@ -378,7 +446,77 @@ Where actual spend on one head (for example, Business Travel) exceeds the sancti
 Hardware bought for prototyping or testing is generally booked under Equipment/Capital rather than Consumables, unless the specific line item was pre-approved as a consumable in the sanctioned budget. When in doubt, classify against the head that matches the item's expected useful life — items with multi-year utility belong under Capital, single-use or short-life items under Consumables.`,
   },
 
-  // ---------------- Compliance Calendar ----------------
+  {
+    category: "corporate-law",
+    slug: "roc-annual-filing-aoc4-mgt7",
+    title: "ROC Annual Filing: AOC-4 and MGT-7 Due Dates",
+    description:
+      "How the AOC-4 and MGT-7 deadlines flow from the AGM date, the per-day late fee, and what's different for small companies and OPCs.",
+    section: "Section 137, Section 92",
+    tags: ["AOC-4", "MGT-7", "ROC", "annual return", "AGM"],
+    lastUpdated: "2026-06-10",
+    content: `## The filings
+
+Every company registered under the Companies Act, 2013 must file two annual forms with the Registrar of Companies, regardless of turnover or whether it transacted at all during the year:
+
+- **Form AOC-4** (financial statements, under Section 137) — within **30 days** of the AGM
+- **Form MGT-7** / **MGT-7A** (annual return, under Section 92) — within **60 days** of the AGM
+
+Small companies (paid-up capital ≤ ₹4 crore and turnover within the prescribed limit) and OPCs file the simplified **MGT-7A** instead of MGT-7.
+
+## How the dates actually land
+
+Both deadlines are anchored to the AGM date, not a fixed calendar date. For a company with a 31 March year-end, the AGM must be held by **30 September**. If the AGM is held exactly on that date, AOC-4 falls due around **30 October** and MGT-7 around **29 November**. If the AGM is held earlier — say 15 August — both deadlines pull forward accordingly (AOC-4 by 14 September, MGT-7 by 14 October in that example).
+
+OPCs work differently: AOC-4 is due within **180 days** of financial year-end (around 27 September for a 31 March year-end, since an OPC has no AGM requirement), and MGT-7A within a further 60 days (around 27 November).
+
+## Penalties
+
+Late filing attracts an additional fee of **₹100 per day per form**, uncapped — a 100-day delay on AOC-4 alone adds ₹10,000 over the normal filing fee. Persistent non-filing can escalate to penalties under Sections 92 and 137 on the company and its officers, and eventually to ROC strike-off proceedings.
+
+## Note on periodic relief windows
+
+MCA has, in past cycles, issued circulars giving a penalty-free window to clear pending AOC-4/MGT-7 filings (for example, a scheme extending the FY 2024-25 deadline to 31 January 2026 without additional fees), and separately a facilitation scheme allowing a reduced additional-fee rate for clearing older defaults. These windows are time-boxed and announced individually — check the current MCA circular before assuming one is open, rather than relying on last year's relief scheme.`,
+  },
+  {
+    category: "corporate-law",
+    slug: "msme-45-day-payment-rule-43bh",
+    title: "The MSME 45-Day Payment Rule: Section 43B(h)",
+    description:
+      "Why unpaid dues to a Udyam-registered micro or small enterprise get disallowed if not paid within 15 or 45 days.",
+    section: "Section 43B(h)",
+    tags: ["MSME", "43B(h)", "Udyam", "45 day rule", "MSMED Act"],
+    lastUpdated: "2026-06-01",
+    content: `## The rule
+
+Section 43B(h), effective from **1 April 2024**, links a buyer's tax deduction for amounts payable to a Micro or Small Enterprise to how quickly the buyer actually pays:
+
+- **15 days** — if there is no written agreement on payment terms
+- **45 days** — if there is a written agreement, and this is a hard ceiling; an agreement specifying 60 days is only enforceable up to 45 days under Section 15 of the MSMED Act, 2006
+
+If payment isn't made within the applicable period, the expense is **disallowed in that financial year** and can only be claimed as a deduction in the year the payment is actually made — regardless of the buyer's accounting method.
+
+## Who it applies to
+
+- The **supplier** must be registered under the MSMED Act as a Micro or Small Enterprise (not Medium — Medium enterprises are excluded), and must be a manufacturer or service provider (not a trader — traders were brought into Udyam registration only for Priority Sector Lending purposes, not for this rule)
+- The **buyer's own registration status is irrelevant** — this applies to any buyer purchasing from a covered MSME supplier
+- It covers goods and services, including certain capital expenditure where the underlying deduction would otherwise fall under Sections 30–36
+
+## Verify Udyam status before you rely on the exemption
+
+You cannot assess 43B(h) exposure without checking whether each vendor actually holds Micro/Small Udyam registration — trader-only vendors and Medium enterprises fall outside the rule entirely. Build a vendor Udyam-status check into onboarding rather than discovering the gap at year-end.
+
+## The separate interest exposure
+
+Beyond the tax disallowance, delayed payment under the MSMED Act also attracts **compound interest at three times the RBI bank rate**, which is itself **not deductible** for income tax purposes — a second, separate cost from the 43B(h) disallowance.
+
+## Year-end control point
+
+Run a vendor ageing report against Udyam-registered Micro/Small suppliers before 31 March every year. Any balance outstanding past its 15- or 45-day window as of year-end is a same-year disallowance, not a timing issue that resolves itself before the return is filed — unlike other Section 43B items, there is no "paid before the due date of filing the return" relief here.
+
+*Section 43B(h) sits within a renumbered framework under the Income Tax Act, 2025 — confirm the current section citation before using it in a formal opinion issued after 1 April 2026.*`,
+  },
+
   {
     category: "compliance-calendar",
     slug: "monthly-gst-tds-due-dates",
@@ -421,6 +559,16 @@ TDS return form numbers changed from Tax Year 2026-27 onward (see the Section 39
 | ITR — transfer pricing cases | 30 November 2026 |
 | Revised return | 31 March 2027 |
 | GSTR-9 (annual GST return) | 31 December of the following financial year |
+
+## Annual — Corporate (Companies Act)
+
+| Filing | Due date |
+|---|---|
+| AGM (31 March year-end companies) | 30 September |
+| AOC-4 | Within 30 days of AGM |
+| MGT-7 / MGT-7A | Within 60 days of AGM |
+| DIR-3 KYC | 30 September |
+| MSME 45-day payment check | Ongoing — review vendor ageing before 31 March, not just at filing time |
 
 ## What to watch through the rest of 2026
 
