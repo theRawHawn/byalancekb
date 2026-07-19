@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Ledger / gazette palette */
+  --paper: #EEF1F6;
+  --paper-raised: #FFFFFF;
+  --ink: #111C3A;
+  --ink-soft: #3D4A6B;
+  --rule: #C7CEDD;
+  --brass: #A8792E;
+  --brass-soft: #F4EBD9;
+  --stamp: #A13D2B;
+  --stamp-soft: #F6E4DE;
+
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rule: var(--rule);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-stamp: var(--stamp);
+  --color-stamp-soft: var(--stamp-soft);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--rule);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+/* Section/rule badge — the recurring signature element */
+.stamp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--brass);
+  color: var(--brass);
+  background: var(--brass-soft);
+  border-radius: 2px;
+  transform: rotate(-0.6deg);
+  white-space: nowrap;
+}
+
+.paper-card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+/* Reading typography for article bodies */
+.prose-ledger {
+  font-family: var(--font-body);
+  color: var(--ink);
+  line-height: 1.75;
+}
+.prose-ledger h1, .prose-ledger h2, .prose-ledger h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 700;
+  scroll-margin-top: 6rem;
+}
+.prose-ledger h2 {
+  font-size: 1.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4rem;
+}
+.prose-ledger h3 {
+  font-size: 1.1rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.prose-ledger p {
+  margin-bottom: 1rem;
+}
+.prose-ledger ul, .prose-ledger ol {
+  margin: 0 0 1rem 1.25rem;
+}
+.prose-ledger li {
+  margin-bottom: 0.35rem;
+}
+.prose-ledger code {
+  font-family: var(--font-mono);
+  background: var(--brass-soft);
+  color: var(--brass);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  font-size: 0.85em;
+}
+.prose-ledger pre {
+  background: var(--ink);
+  color: #E8ECF6;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.prose-ledger pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.prose-ledger blockquote {
+  border-left: 3px solid var(--brass);
+  padding-left: 1rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin: 1.25rem 0;
+}
+.prose-ledger table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+}
+.prose-ledger th, .prose-ledger td {
+  border: 1px solid var(--rule);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-ledger th {
+  background: var(--paper);
+  font-weight: 600;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--stamp);
+  outline-offset: 2px;
+}

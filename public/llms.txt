@@ -1,0 +1,14 @@
+# The Ledger
+
+> A searchable reference for accountants and chartered accountants covering GST, income tax, TDS, corporate law, and compliance due dates in India.
+
+## Categories
+
+- [GST / Indirect Tax](/learn/gst): Input tax credit, GSTR filings, e-invoicing, reverse charge rules.
+- [Income Tax](/learn/income-tax): TDS/TCS sections, ITR filing, amendments, assessment procedure.
+- [Corporate Law](/learn/corporate-law): Companies Act compliance, ROC filings, MCA procedures.
+- [Compliance Calendar](/learn/compliance-calendar): Due dates across GST, TDS, ROC, and payroll.
+
+## Notes
+
+Content is factual reference material aimed at practising accountants; entries cite the relevant section or rule and note the last-updated date.
