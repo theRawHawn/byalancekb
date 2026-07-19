@@ -4,10 +4,11 @@
 
 ## Categories
 
-- [GST / Indirect Tax](/learn/gst): Input tax credit, GSTR filings, e-invoicing, reverse charge rules.
-- [Income Tax](/learn/income-tax): TDS/TCS sections, ITR filing, amendments, assessment procedure.
-- [Corporate Law](/learn/corporate-law): Companies Act compliance, ROC filings, MCA procedures.
-- [Compliance Calendar](/learn/compliance-calendar): Due dates across GST, TDS, ROC, and payroll.
+- [GST / Indirect Tax](/learn/gst): Input tax credit, GSTR filings, GST 2.0 rate structure.
+- [Income Tax](/learn/income-tax): TDS/TCS, ITR filing, the transition to the Income Tax Act, 2025.
+- [Payroll & Labour Codes](/learn/payroll-labour-codes): EPF, ESI, gratuity, and the four Labour Codes.
+- [Corporate Law](/learn/corporate-law): Companies Act compliance, ROC filings, grant/budget compliance.
+- [Compliance Calendar](/learn/compliance-calendar): Due dates across GST, TDS, ITR, ROC, and payroll.
 
 ## Notes
 
