@@ -345,6 +345,59 @@ CBDT Circular No. 13/2021 (30 June 2021) clarified that TDS under Section 194Q i
 
 Transactions on which TDS is deductible under another provision (e.g., Section 194O for e-commerce operators), purchases from non-resident sellers without an Indian business connection, transactions in securities/commodities on recognised exchanges, and purchases by government entities not carrying on business.`,
   },
+  {
+    category: "income-tax",
+    slug: "tds-tcs-section-mapping-old-vs-new",
+    title: "TDS & TCS Section Mapping: Old (1961) vs New (2025) — Full Reference",
+    description:
+      "Every commonly used TDS/TCS section, old and new, in one table — 192, 194A–194S, 206C and where each one landed under the 2025 Act.",
+    section: "Sections 392–394",
+    tags: ["TDS mapping", "TCS mapping", "192", "194C", "194J", "206C", "payment codes", "reference table"],
+    lastUpdated: "2026-07-15",
+    content: `## Why one table instead of forty sections
+
+Under the 1961 Act, TDS provisions were scattered across 40+ sections — 192 for salary, 194A for interest, 194C for contractors, 194J for professional fees, 194Q for goods purchases, 206C for TCS, and so on, each with its own sub-clauses. The Income Tax Act, 2025 consolidates almost the entire framework into **three parent sections**, with a numeric **payment code** (in the 1001–1092 range) identifying the specific type of transaction instead of a standalone section number.
+
+**Rates and thresholds have not changed anywhere in this table.** This is a citation and reporting change, not a tax-policy change.
+
+## The three parent sections
+
+| New section | Covers | Old equivalent |
+|---|---|---|
+| **Section 392** | TDS on salary and PF-related payments | Section 192, Section 192A |
+| **Section 393** | TDS on virtually every other payment type — residents and non-residents | Sections 194, 194A through 194S, Section 195 |
+| **Section 394** | Tax Collected at Source (TCS) | Section 206C (all sub-clauses) |
+
+## Common section-by-section mapping
+
+| Old section | Old subject | New section | Notes |
+|---|---|---|---|
+| 192 | Salary | 392 | Rates reference the new default-regime slab section |
+| 192A | Premature PF withdrawal | 392(7) | Folded into the salary parent section |
+| 194 | Dividends | 393 | Payment-code driven |
+| 194A | Interest (other than securities) | 393 | Form 15G/15H rules unchanged |
+| 194B | Lottery / game winnings | 393 | — |
+| 194C | Contractor / sub-contractor payments | 393 | 1%/2% rates continue |
+| 194D | Insurance commission | 393 | — |
+| 194DA | Life insurance policy payouts | 393 | — |
+| 194H | Commission or brokerage | 393 | — |
+| 194I | Rent | 393 | Plant/machinery vs. land/building distinction continues |
+| 194-IA | TDS on sale of immoveable property | 393 | Consolidated with other 26QB-style forms |
+| 194-IB | Rent by individuals/HUF (non-audit) | 393 | — |
+| 194J | Professional / technical fees, director remuneration | 393(1) | ₹50,000 threshold, 10%/2% rates (see the dedicated 194J/393 article) |
+| 194O | E-commerce operator payments to sellers | 393 | — |
+| 194Q | Purchase of goods | 393 | ₹50 lakh / ₹10 crore test unchanged (see the dedicated article) |
+| 194R | Benefits/perquisites in business or profession | 393 | — |
+| 194S | Virtual digital asset (crypto) transfers | 393 | — |
+| 195 | Payments to non-residents | 393 | Rate still depends on nature of payment and applicable DTAA |
+| 206C (all sub-clauses except (1H)) | Tax Collected at Source | 394 | 206C(1H) itself was abolished from 1 April 2025, not merely renumbered |
+
+## What this means operationally
+
+- Your vendor master, ERP tax codes, and TDS workbench need to map each legacy section to its Section 393 payment code — most mid-sized finance teams find 8–15 section codes actually in active use, which is a manageable one-time remapping exercise
+- Transactions dated before 1 April 2026 are still reported under the **old** section numbers, even if the return is filed later — the governing law follows the transaction date
+- Where this article and a source you're checking disagree on a specific payment code (not the parent section — those are consistently reported as 392/393/394 across official and practitioner sources), treat the payment code as unconfirmed and verify against the TRACES portal or a current CBDT circular before filing`,
+  },
 
   {
     category: "payroll-labour-codes",
